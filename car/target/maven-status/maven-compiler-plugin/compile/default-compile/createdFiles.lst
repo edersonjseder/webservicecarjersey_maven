@@ -1,0 +1,9 @@
+com/book/model/ResponseJSON.class
+com/book/factory/ConnectionFactory.class
+com/book/utils/SqlQueries.class
+com/book/model/Car.class
+com/book/dao/CarDAO.class
+com/book/rest/TheApplication.class
+com/book/rest/CarsServletResource.class
+com/book/rest/GsonMessageBodyHandler.class
+com/book/model/CarsList.class
