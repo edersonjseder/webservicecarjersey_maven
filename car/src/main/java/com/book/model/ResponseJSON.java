@@ -6,12 +6,23 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ResponseJSON {
 	private String status;
 	private String message;
+	private String url;
 
 	public static ResponseJSON ok(String value){
 		
 		ResponseJSON resp = new ResponseJSON();
 		resp.setStatus("Ok");
 		resp.setMessage(value);
+		
+		return resp;
+	}
+	
+	public static ResponseJSON ok(String value, String url){
+		
+		ResponseJSON resp = new ResponseJSON();
+		resp.setStatus("Ok");
+		resp.setMessage(value);
+		resp.setUrl(url);
 		
 		return resp;
 	}
@@ -36,5 +47,13 @@ public class ResponseJSON {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }

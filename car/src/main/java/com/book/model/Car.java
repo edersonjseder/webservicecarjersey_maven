@@ -2,8 +2,14 @@ package com.book.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Car implements Serializable {
 
@@ -11,11 +17,19 @@ public class Car implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
 	private String name;
 	private String description;
 	private String type;
+	
+	@Column(name="url_photo", nullable=true, length=900)
 	private String urlPhoto;
+	
+	@Column(name="url_video", nullable=true, length=900)
 	private String urlVideo;
 	private String latitud;
 	private String longitud;
